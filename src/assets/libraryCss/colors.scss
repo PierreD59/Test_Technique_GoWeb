@@ -1,5 +1,6 @@
 @import "variables.scss";
 
+// Background color
 .bgPrimary {
   background: $primary;
 }
@@ -25,6 +26,7 @@
   background: transparent;
 }
 
+// Colors
 .primary {
   color: $primary;
 }
@@ -45,4 +47,9 @@
 }
 .darkGray {
   color: $darkgray;
+}
+
+// Box Shadow
+.shadow {
+  box-shadow: 0px 2px 5px $darkgray;
 }

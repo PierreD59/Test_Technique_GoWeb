@@ -2,7 +2,7 @@
 @import "variables.scss";
 
 .titleProductManagement,
-.titleTable,
+.theadTitle,
 .contentTable,
 .contentTag,
 .contentPrice,
@@ -19,23 +19,36 @@
   font-size: 36px;
   font-weight: bold;
 }
-.titleTable,
-.titleHeader {
-  font-size: 16px;
-  font-weight: bold;
-}
+
+.titleHeader,
+.theadTitle,
 .contentTable,
 .spanPrice {
   font-size: 16px;
   font-weight: bold;
 }
+
 .contentTag,
 .contentPrice,
-.contentProduct {
+.contentProduct,
+.spanTVA {
   font-size: 16px;
   font-weight: 400;
 }
 .titleCategory {
   font-size: 24px;
   font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.justify {
+  text-align: justify;
+}
+.left {
+  text-align: left;
 }
