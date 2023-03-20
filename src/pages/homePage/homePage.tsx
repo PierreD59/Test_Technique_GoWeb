@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
   }, []);
   return (
     <>
-      <h1>HomePage</h1>
+      <h1>Products management</h1>
       <table>
         <thead>
           <tr>

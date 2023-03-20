@@ -18,19 +18,16 @@
 .primaryTitleProduct {
   font-size: 36px;
   font-weight: bold;
-  color: $primary;
 }
-.titleTable {
-  font-size: 16px;
-  font-weight: bold;
-  color: $white;
-}
-.contentTable,
-.spanPrice,
+.titleTable,
 .titleHeader {
   font-size: 16px;
   font-weight: bold;
-  color: $darkgray;
+}
+.contentTable,
+.spanPrice {
+  font-size: 16px;
+  font-weight: bold;
 }
 .contentTag,
 .contentPrice,
@@ -41,5 +38,4 @@
 .titleCategory {
   font-size: 24px;
   font-weight: bold;
-  color: $primary;
 }

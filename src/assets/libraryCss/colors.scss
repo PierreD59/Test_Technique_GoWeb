@@ -1,0 +1,48 @@
+@import "variables.scss";
+
+.bgPrimary {
+  background: $primary;
+}
+.bgSecondary {
+  background: $secondary;
+}
+.bgSuccess {
+  background: $success;
+}
+.bgWhite {
+  background: $white;
+}
+.bgOffWhite {
+  background: $offWhite;
+}
+.bgLightGray {
+  background: $lightgray;
+}
+.bgDarkGray {
+  background: $darkgray;
+}
+.bgTransparent {
+  background: transparent;
+}
+
+.primary {
+  color: $primary;
+}
+.secondary {
+  color: $secondary;
+}
+.success {
+  color: $success;
+}
+.white {
+  color: $white;
+}
+.offWhite {
+  color: $offWhite;
+}
+.lightGray {
+  color: $lightgray;
+}
+.darkGray {
+  color: $darkgray;
+}
