@@ -5,6 +5,7 @@
   width: 350px;
   padding: 50px;
   position: fixed;
+  background: $primary;
   .burger {
     svg {
       display: none;
@@ -42,6 +43,7 @@
   .navigation-menu {
     width: 10%;
     padding: 50px 25px;
+    background: transparent;
     .burger {
       display: flex;
       justify-content: flex-start;
@@ -63,6 +65,7 @@
 
   .navigation-menu.expanded {
     width: 50%;
+    background: $primary;
     .burger {
       display: flex;
       justify-content: flex-end;

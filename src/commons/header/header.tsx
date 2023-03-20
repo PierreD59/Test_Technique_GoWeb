@@ -6,11 +6,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={
-        isNavExpanded
-          ? "navigation-menu expanded bgPrimary"
-          : "navigation-menu bgTransparent"
-      }
+      className={isNavExpanded ? "navigation-menu expanded" : "navigation-menu"}
     >
       <div className="burger">
         <AiOutlineMenu
