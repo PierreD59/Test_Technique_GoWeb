@@ -1,3 +1,5 @@
+@import "../../assets/libraryCss/variables.scss";
+
 main {
   margin: 0 50px 0 400px;
   padding-bottom: 50px;
@@ -5,7 +7,7 @@ main {
     padding: 68px;
   }
 
-  .fake-table {
+  .tableProduct {
     display: table;
     width: 100%;
     .tr {
@@ -16,13 +18,17 @@ main {
     .td {
       display: table-cell;
       padding: 20px;
+      a {
+        color: $darkgray;
+        text-decoration: none;
+      }
       .categoryTags {
         border-radius: 17px;
         padding: 5px;
       }
     }
 
-    @media (max-width: 769px) {
+    @media (max-width: 992px) {
       display: block;
       margin: 10px 0;
       .tr {
@@ -36,15 +42,19 @@ main {
         font-size: 11px;
         display: block;
         padding: 0;
-        border-bottom: 1px solid #ededeb;
+        padding-right: 25px;
+        border-bottom: 1px solid $lightgray;
+        text-align: right;
+        .categoryTags {
+          width: 150px;
+        }
         &::before {
-          font-weight: bold;
           display: inline-block;
           width: 50%;
           margin-right: 10px;
           padding: 10px;
           content: attr(data-head);
-          border-right: 1px solid #ededed;
+          border-right: 1px solid $lightgray;
         }
         &:last-child {
           border-bottom: 0;
@@ -54,8 +64,14 @@ main {
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 992px) {
   main {
     margin: 0 25px;
+    .tableProduct {
+      .categoryBlock {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
   }
 }

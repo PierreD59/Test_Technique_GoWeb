@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.scss";
 import Header from "./commons/header/header";
-import HomePage from "./pages/homePage/homePage";
+import Router from "./router/Router";
 
 function App() {
   return (
     <div className="App bgOffWhite">
       <Header />
-      <HomePage />
+      <Router />
     </div>
   );
 }

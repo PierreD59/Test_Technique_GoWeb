@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Product from "../../models/Product";
 import ProductService from "../../services/ProductService";
+import { Link } from "react-router-dom";
 
 const ProductTable: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -11,7 +12,7 @@ const ProductTable: React.FC = () => {
     );
   }, []);
   return (
-    <div className="fake-table">
+    <div className="tableProduct">
       <div className="tr thead bgPrimary white theadTitle shadow">
         <div className="td left">Product name</div>
         <div className="td ce,ter">Category</div>
@@ -30,18 +31,26 @@ const ProductTable: React.FC = () => {
         );
         return (
           <div className="tr bgWhite shadow" key={index++}>
-            <div className="td contentTable darkGray left">
-              {productObject.title}
+            <div className="td contentTable" data-head="Product name">
+              <Link to={`/product/${product.id}`}>
+                {productObject.title.substring(0, 30) + "..."}
+              </Link>
             </div>
-            <div className="td">
-              <div className="center categoryTags contentTag white bgSecondary">
+            <div className="td categoryBlock">
+              <div
+                className="center categoryTags contentTag white bgSecondary"
+                data-head="Category"
+              >
                 {productObject.category}
               </div>
             </div>
-            <div className="td contentPrice darkGray right">
+            <div className="td contentPrice darkGray right" data-head="Price">
               {productObject.price} €
             </div>
-            <div className="td contentPrice darkGray right">
+            <div
+              className="td contentPrice darkGray right"
+              data-head="Price (including VAT)"
+            >
               {productObject.priceWithTVA} €
             </div>
           </div>

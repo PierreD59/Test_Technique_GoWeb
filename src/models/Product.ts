@@ -27,8 +27,6 @@ class Product {
    * @returns number
    */
   public calculateTVA(): number {
-    console.log("toto");
-
     if (this.price) {
       return Math.round(this.price * 120) / 100;
     } else {
