@@ -36,15 +36,15 @@ const ProductTable: React.FC = () => {
                 {productObject.title.substring(0, 30) + "..."}
               </Link>
             </div>
-            <div className="td categoryBlock">
-              <div
-                className="center categoryTags contentTag white bgSecondary"
-                data-head="Category"
-              >
+            <div className="td categoryBlock contentTable" data-head="Category">
+              <div className="center categoryTags contentTag white bgSecondary">
                 {productObject.category}
               </div>
             </div>
-            <div className="td contentPrice darkGray right" data-head="Price">
+            <div
+              className="td contentPrice darkGray right contentTable"
+              data-head="Price"
+            >
               {productObject.price} €
             </div>
             <div

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -16,9 +17,11 @@ const Header: React.FC = () => {
         />
       </div>
       <nav>
-        <div className="logoBlock">
-          <img src="img/logo.svg" alt="Logo du site internet" />
-        </div>
+        <Link to={"/"}>
+          <div className="logoBlock">
+            <img src="img/logo.svg" alt="Logo du site internet" />
+          </div>
+        </Link>
 
         <ul className="titleHeader white">
           <li>DashBoard</li>

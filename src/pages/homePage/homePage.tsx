@@ -2,7 +2,7 @@ import ProductTable from "../../components/productTable/productTable";
 
 const HomePage: React.FC = () => {
   return (
-    <main>
+    <main className="homePage">
       <h1 className="titleProductManagement primary center">
         Products management
       </h1>

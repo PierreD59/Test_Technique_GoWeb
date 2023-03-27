@@ -23,12 +23,45 @@ const ProductPage: React.FC = () => {
 
   return (
     <main>
-      <p>{product?.title}</p>
-      <p>{product?.category}</p>
-      <p>{product?.price} €</p>
-      <p>{product?.priceWithTVA} €</p>
-      <img src={product?.image} alt={product?.title}></img>
-      <p>{product?.description}</p>
+      <div className="productBlock">
+        <div className="productTitle">
+          <h1 className="center primaryTitleProduct primary">
+            {product?.title}
+          </h1>
+        </div>
+        <div className="productImage">
+          <img src={product?.image} alt={product?.title}></img>
+        </div>
+        <div className="productContentBlock">
+          <div className="productContent">
+            <h2 className="titleCategory primary">Description</h2>
+            <p className="justify contentProduct darkgray">
+              {product?.description}
+            </p>
+          </div>
+          <div className="productCategory">
+            <h2 className="titleCategory primary">Category</h2>
+            <p className="center categoryTags contentTag white bgSecondary">
+              {product?.category}
+            </p>
+          </div>
+        </div>
+        <div className="productPriceBlock">
+          <div className="productPriceForm">
+            <h2 className="titleCategory primary">Price</h2>
+            <div className="productPrice contentPrice darkgray">
+              <p> {product?.price} €</p>
+              <p>
+                <span className="spanPrice">Price</span> (including VAT)
+                {product?.priceWithTVA} €
+              </p>
+            </div>
+            <button className="bgPrimary white buttonText">
+              Update product
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
   );
 };
