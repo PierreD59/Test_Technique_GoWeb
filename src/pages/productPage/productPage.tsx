@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import PriceForm from "../../components/priceForm/priceForm";
 import Product from "../../models/Product";
 import ProductService from "../../services/ProductService";
 
@@ -9,17 +10,20 @@ const ProductPage: React.FC = () => {
 
   useEffect(() => {
     if (id) {
-      ProductService.getProductById(+id).then((data) => setProduct(data));
+      ProductService.getProductById(+id)
+        .then(
+          (data) =>
+            (data = new Product(
+              data.title,
+              data.price,
+              data.description,
+              data.category,
+              data.image
+            ))
+        )
+        .then((data) => setProduct(data));
     }
   }, [id]);
-
-  // let productObject: Product = new Product(
-  //   product.title,
-  //   product.price,
-  //   product.description,
-  //   product.category,
-  //   product.image
-  // );
 
   return (
     <main>
@@ -47,19 +51,7 @@ const ProductPage: React.FC = () => {
           </div>
         </div>
         <div className="productPriceBlock">
-          <div className="productPriceForm">
-            <h2 className="titleCategory primary">Price</h2>
-            <div className="productPrice contentPrice darkgray">
-              <p> {product?.price} €</p>
-              <p>
-                <span className="spanPrice">Price</span> (including VAT)
-                {product?.priceWithTVA} €
-              </p>
-            </div>
-            <button className="bgPrimary white buttonText">
-              Update product
-            </button>
-          </div>
+          <PriceForm product={product as Product} edit={true} />
         </div>
       </div>
     </main>

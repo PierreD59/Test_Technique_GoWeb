@@ -22,6 +22,9 @@ const ProductTable: React.FC = () => {
         </div>
       </div>
       {products.map((product, index) => {
+        /**
+         * Instancie un nouveau produit
+         */
         let productObject: Product = new Product(
           product.title,
           product.price,
