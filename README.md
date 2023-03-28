@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Test Technique GoWeb
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Réalisation d'un test technique pour la candidature Développeur Front-End chez GoWeb.
 
-## Available Scripts
+## Contexte
 
-In the project directory, you can run:
+Le client Circle Products vous sollicite pour la création d'une application qui permettra à différents
+intervenants de gérer plusieurs aspects du magasin via leur ordinateur ou téléphone mobile. La première
+fonctionnalité à mettre en place est la gestion du prix des produits proposés en magasin. Le client vous
+fournit les maquettes créées par le service créa interne. Vous vous apercevrez qu'il manque les maquettes
+mobiles, à vous de proposer un rendu adaptatif cohérent et ergonomique pour chaque page.
+Le client n'a pas encore de socle technique front et vous laisse le choix entre l'utilisation de React, VueJs,
+Angular pour réaliser ce projet. Vous avez également la possibilité de réaliser le projet en Vanilla JS en
+utilisant des modules.
 
-### `npm start`
+## Consignes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Home :
+- Intégration complète de la maquette (n'oubliez pas le responsive)
+- Récupération de la liste des produits via un appel à fakestoreapi
+- Mise en place d'une classe produit permettant de gérer la modification du prix d'un produit ainsi que le calcul de la TVA (20%)
+- Lorsqu'on clique sur la ligne d'un produit, on navigue vers la page de détails où on affichera
+l'ensemble des informations du produit
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Page produit :
+- Intégration complète de la maquette (n'oubliez pas le responsive)
+- Permettre de mettre à jour le prix d'un produit et de l'envoyer via un appel API lors du clic sur le bouton "Update product" (le bouton ne doit être cliquable que si le prix a été modifié)
+- Mettre à jour l'affichage du prix TTC lorsqu'on modifie localement le prix du produit
+- Permettre de rafraichir la page produit sans perdre les données
 
-### `npm test`
+## Langages
+- React TypeScript
+- Html
+- Scss
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- git clone https://github.com/PierreD59/Test_Technique_GoWeb.git
+- cd Test_Technique_GoWeb
+- Installer les dépendances avec npm i
+- Lancer le serveur json npm run json, il se lancera sur le port 3004.
+- Lancer le serveur React avec npm start pour lancer le projet.
+- S'il y a des dernières nouveautés : Git pull origin main
