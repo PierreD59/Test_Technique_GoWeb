@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import PriceForm from "../../components/priceForm/priceForm";
 import Product from "../../models/Product";
 import ProductService from "../../services/ProductService";
@@ -7,7 +7,9 @@ import ProductService from "../../services/ProductService";
 const ProductPage: React.FC = () => {
   const [product, setProduct] = useState<Product>();
   let { id } = useParams<string>();
-
+  /**
+   * Permet d'instancier le produit pour pouvoir afficher le prix avec la TVA d'appliqué
+   */
   useEffect(() => {
     if (id) {
       ProductService.getProductById(+id)
@@ -29,12 +31,22 @@ const ProductPage: React.FC = () => {
     <main>
       <div className="productBlock">
         <div className="productTitle">
+          <Link to={"/"} title={`Permet un retour en arrière`}>
+            <img
+              src="../img/back_button.svg"
+              alt="Icone permettant le retour en arrière"
+            />
+          </Link>
           <h1 className="center primaryTitleProduct primary">
             {product?.title}
           </h1>
+          <div></div>
         </div>
         <div className="productImage">
-          <img src={product?.image} alt={product?.title}></img>
+          <img
+            src={product?.image}
+            alt={`Représente le produit : ${product?.title}`}
+          ></img>
         </div>
         <div className="productContentBlock">
           <div className="productContent">

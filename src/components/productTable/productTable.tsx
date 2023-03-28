@@ -35,7 +35,10 @@ const ProductTable: React.FC = () => {
         return (
           <div className="tr bgWhite shadow" key={index++}>
             <div className="td contentTable" data-head="Product name">
-              <Link to={`/product/${product.id}`}>
+              <Link
+                to={`/product/${product.id}`}
+                title={`Page produit de ${productObject.title}`}
+              >
                 {productObject.title.substring(0, 30) + "..."}
               </Link>
             </div>

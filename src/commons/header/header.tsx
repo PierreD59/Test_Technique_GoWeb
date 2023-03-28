@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         />
       </div>
       <nav>
-        <Link to={"/"}>
+        <Link to={"/"} title={`Permet de retourner sur la page d'accueil`}>
           <div className="logoBlock">
             <img src="img/logo.svg" alt="Logo du site internet" />
           </div>

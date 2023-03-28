@@ -13,7 +13,18 @@
   .productTitle {
     grid-area: title;
     width: 100%;
-    padding: 100px 0 0 0;
+    padding: 100px 0 50px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    img {
+      position: absolute;
+      top: 110px;
+      width: 35px;
+    }
+    h1 {
+      width: 100%;
+    }
   }
   .productPriceBlock {
     grid-area: price;
@@ -94,6 +105,11 @@
       margin-left: 0;
       margin-right: 0;
       .productTitle {
+        flex-direction: column;
+        img {
+          position: initial;
+          margin-bottom: 15px;
+        }
         h1 {
           padding: 0 0 50px 0;
         }
