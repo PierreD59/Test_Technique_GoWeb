@@ -15,8 +15,7 @@ utilisant des modules.
 
 ## 🎨 Ressources
 - Pour cet exercice nous utiliseront la liste des produits fournie par fakestoreapi.com dont la documentation se trouve à l'adresse suivante : https://fakestoreapi.com/docs
-- Les maquettes au format XD sont disponibles à cette adresse : https://xd.adobe.com/view/3e2909d1-79c4-
-4337-b504-37b1742fcffc-6b7a/grid/
+- Les maquettes au format XD sont disponibles à cette adresse : https://xd.adobe.com/view/3e2909d1-79c4-4337-b504-37b1742fcffc-6b7a/grid/
 - La police utilisée est la Roboto, disponible à cette adresse : https://fonts.google.com/specimen/Roboto
 
 ## 📝 Consignes
