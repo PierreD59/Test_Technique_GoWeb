@@ -49,5 +49,5 @@ l'ensemble des informations du produit
 
 ## 💥 Difficultés rencontrées
 - API qui a planté en cours de route : J'ai utilisé un serveur JSON pour ne pas être bloqué en raison des multiples crash de l'API (Error 522)
-- Fonctionnalité pour mettre à jour le prix d'un produit et l'envoyer direct via un appel API : Je n'ai pas su réaliser cette fonctionnalité. Qu'importe les méthodes réalisés, l'update ne s'effectuait pas.
-- Permettre de rafraichir la page produit sans perdre les données : J'ai entendu parlé de Context, une méthode de React, mais je n'ai pas réussis à la mettre en pratique.
+- Fonctionnalité pour mettre à jour le prix d'un produit et l'envoyer direct via un appel API : Je n'ai pas su réaliser cette fonctionnalité. Qu'importe les méthodes réalisées, l'update ne s'effectuait pas.
+- Permettre de rafraîchir la page produit sans perdre les données : J'ai entendu parler de Context, une méthode de React, mais je n'ai pas réussi à la mettre en pratique.
